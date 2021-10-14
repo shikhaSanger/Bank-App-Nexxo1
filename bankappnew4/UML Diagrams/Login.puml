@@ -1,0 +1,22 @@
+@startuml
+
+:Start;
+repeat:Enter Email ID;
+ if(Verify Email ID ) then (false)
+   :User does not exist;
+   end
+   else(true)
+   if (Check password) then (password ok)
+     :Move to dashboard;
+stop;
+
+     stop;
+
+ else (false)
+ :Check credentials;
+ break;
+stop;
+
+
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Start;
+if (User is admin) then (True      )
+:Go to Dashboard;
+:Fetch data from Database as per requirement;
+stop;
+else (     False)
+:Person is not authorized;
+stop;
+
+@enduml

@@ -1,0 +1,55 @@
+@(customer:dto.LoginResponseDto)
+@main(""){
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script type="text/javascript" src="http://localhost:9000/assets/javascripts/login.js"></script>
+  <script type="text/javascript" src="http://localhost:9000/assets/javascripts/jquery.min.js"></script>
+
+  <style>
+   body{
+   background-color:#008080;
+   padding-top:20vh;
+   }
+      .button1{
+      color:white;
+      font-size: 18pt;
+       height: 55px;
+       width:610px;
+       background-color:blue
+
+      }
+   .text1{
+   font-size: 18pt; height: 55px; width:600px;
+
+   }
+
+</style>
+
+
+<body>
+
+<form action="/login" name="loginForm" method="POST" class="card" style="width:600px;height:auto;margin:0.1px 850px; padding: 100px 100px;border-radius:20px; box-shadow:10px 10px;background-color:white;">
+  <div style="vertical-align: text-top;text-align:center;" ><h1><b> Welcome to the Bank </b></h1> </div>
+  <p><h1><label >Email Id</label></h1></p>
+  <p><h1><input type="email" class="text1" id="email"
+                name="email" required></h1></p>
+  <p><h1><label>Password</label></h1></p>
+  <p><h1><input type="password" class="text1" id="password" name="password" required></h1></p><br>
+  <div align="center"> <p><button type="submit" class="button1"  >Login</button></div></p>
+
+  </div>
+</form>
+<script>
+  $(document).$(function(){
+  alert(@customer.getMessage)
+  });
+</script>
+
+</body>
+
+
+</html>
+}

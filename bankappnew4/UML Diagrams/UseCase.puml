@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor Customer as C1
+actor Admin as C2
+package BankApp{
+usecase "Login" as uc1
+usecase "Deposite" as uc2
+usecase "withdraw" as uc3
+usecase "Balance" as uc4
+usecase "Transaction History" as uc5
+usecase "Register" as uc6
+usecase "View list of all customer" as uc7
+usecase "Deactivate/Activate a customer" as uc8
+usecase "Logout" as uc9
+}
+
+C1-->uc1
+C1-->uc2
+C1-->uc3
+C1-->uc4
+C1-->uc5
+C2-->uc6
+C2-->uc7
+C2-->uc8
+C2-->uc5
+C1-->uc9
+C2-->uc9
+@enduml

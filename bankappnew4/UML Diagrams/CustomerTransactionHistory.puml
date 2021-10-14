@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+Start
+:Customer Login;
+repeat:Enter info and login;
+if (details verified ) then (true)
+  :Go to the dashboard;
+  :Click on check activity;
+  :Display the statement;
+stop;
+elseif(Try again, before three failures) then (no)
+:Not authorize person;
+stop;
+endif
+
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Admin Login;
+if (User is admin) then (True)
+:Go to Dashboard;
+:Check account deactivation time;
+if(Account is deactivated for two years) then (True)
+:click on dismiss account(make it inoperative;
+
+elseif(Receive respond from customer)
+:Process for reactivation;
+break;
+
+
+
+
+
+@enduml

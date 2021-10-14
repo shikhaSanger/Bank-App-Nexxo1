@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Admin Login;
+if (User is admin) then (True)
+:Go to Dashboard;
+if(If application for reactivation of account received)
+
+
+:Go to dashboard and Activate account;
+
+stop;
+else
+:No need to reactivate;
+stop;
+endif;
+
+
+else (False)
+:Not authorized person to activation ;
+stop;
+
+
+@enduml

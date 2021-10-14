@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Customer login;
+:Enter info and login;
+if (details verified ) then (true)
+  :Go to deposit page;
+  :Enter info, amount;
+  :Submit;
+
+
+else (false)
+:Customer not found;
+break;
+stop;
+endif
+
+
+
+stop
+
+@enduml

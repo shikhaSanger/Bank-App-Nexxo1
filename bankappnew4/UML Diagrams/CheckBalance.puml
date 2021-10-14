@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Customer login;
+repeat:Enter info and login;
+if (details verified ) then (true)
+  :Go to the dashboard;
+  :Click on check balance;
+
+  :Display the balance;
+stop;
+endif
+
+:try Again;
+
+
+
+
+@enduml

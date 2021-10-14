@@ -1,0 +1,79 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text1{
+        align:left;
+        font-size: 18pt;
+        height: 55px;
+        width:700px;
+        background-color:blue;
+        color:white;
+        }
+
+    </style>
+</head>
+<body style="background-color:#008080;padding-top:20vh;">
+<div class="card" style="width:1400px;height:auto;margin:10px 300px; padding: 40px 100px;border-radius:20px; box-shadow:10px 10px;background-color:white; column-count:2;">
+
+    <div align="left" class="col-sm-6">
+
+        <div style="color:red;text-align:center;"><h1> Welcome to the Dashboard <span id="customer_name" /></h1></div>
+        <p><H1> Customer ID : <span id="customer_id" /></h1></p>
+       
+        <br>
+      
+
+        <form action="http://localhost:8080/Bank%20App/Deposite.html" method="GET" name="deposite">
+           
+        <p><button type="submit"  class="text1" >Deposite</button></p>
+        </form>
+        <br>
+        <form action="http://localhost:8080/Bank%20App/Withdraw.html" method="GET" name="withDraw">
+          
+        <p><button type="submit"  class="text1" >Withdraw</button></p>
+        </form>
+        <br>
+
+        <form action="http://localhost:8080/Bank%20App/TransactionHistory.html" method="GET" name="transactionHistory">
+            
+        <p><button type="submit"  class="text1" >Transaction History</button></p>
+		</form>
+		<p><h1><a href="http://localhost:8080/Bank%20App/index.html" >Logout<h1></p>
+		</div>
+<div align="left" class="col-sm-6">
+            <div align="center" class="col-sm-6"><img src="https://www.paisabazaar.com/wp-content/uploads/2018/11/IDBI-Bank-GO-Mobile-App.jpg"></div>
+        
+    </div>
+
+
+
+</body>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+window.onload=function(){
+const email = localStorage.getItem('Email');
+	$.ajax({
+			type:"POST",
+			url:"http://localhost:9000/checkid",
+			data :{
+			email :email,
+			},
+			success: function(response){
+			document.getElementById('customer_id').innerHTML=response.id;
+			document.getElementById('customer_name').innerHTML=response.username;
+			localStorage.setItem("CustomerId", response.id);
+			}
+});
+}	
+</script>
+</html>

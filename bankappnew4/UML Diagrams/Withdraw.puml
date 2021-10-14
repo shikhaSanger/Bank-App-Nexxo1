@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Customer login;
+:Enter details;
+:Submit;
+
+
+
+
+stop
+
+@enduml
