@@ -25,7 +25,7 @@ This application runs on two servers ( Apache tomact and Netty) and connect with
 <div id="execute">
 <h2> How to execute </h2>
 1. Clone the project and save in saparate folder. <br>
-2. Import database (my_bank_app) in workbench. <br>
+2. Create database by the name "my_bank_app" and import database tables(saved in folder "my_bank_app") in workbench. <br>
 3. Import the project (folder name in git project: bankappnew4) in Intellij Idea.<br>
 4. Build the project using sbt. As the dependencies are added in build.sbt file, it will add external jar files in library(Like Ebean library, Json Library, ). <br>
 5. Run the project using sbt.<br>
