@@ -48,7 +48,7 @@ This application runs on two servers ( Apache tomact and Netty) and connect with
 (i)  Log in as customer will redirect on customer dashboard.<br>
      For trial purpose only: <br>
      Customer log in id: <br>
-     Username : sanger705@gmil.com <br>
+     Username : sanger705@gmail.com <br>
      Passowrd : 12345 <br>
      Note : Rest data saved in tables or new customer can be registered using admin dashboard. <br>
 (ii) Functions<br>
