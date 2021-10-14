@@ -9,8 +9,8 @@ Table of content<br>
 
 <div id="introduction">
 <h2>Introduction </h2>
-Application provide a saparate interface to customer and admin to interact with bank related operations. 
-This application runs on two servers ( Apache tomact and Netty) and connect with the sql database.
+Application provide a saparate interface to customer and admin to interact with bank related operations. <br>
+This application runs on two servers ( Apache tomact and Netty) and connect with the sql database.<br>
 </div>
 
 <div id="technologies">
