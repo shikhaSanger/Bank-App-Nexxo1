@@ -26,11 +26,11 @@ This application runs on two servers ( Apache tomact and Netty) and connect with
 <h2> How to execute </h2>
 1. Clone the project and save in saparate folder. <br>
 2. Create database by the name "my_bank_app" and import database tables(saved in folder "my_bank_app") in workbench. <br>
-3. Import the project (folder name in git project: bankappnew4) in Intellij Idea.<br>
+3. Import the project (folder name in git project: bankappnew4) in Intellij Idea and mention your credentials in application.conf file.<br>
 4. Build the project using sbt. As the dependencies are added in build.sbt file, it will add external jar files in library(Like Ebean library, Json Library, ). <br>
 5. Run the project using sbt.<br>
 6. On the otherhand, save the other folder(folder name in git project: HTML Pages hosted on tomcat)in the webapps of Apache Tomcat.<br>
-7. Run tomcat server and then HTML pages, starting from index.html page.  <br>
+7. Start the tomcat server using "localhost:8080" in browser and then HTML pages, starting from index.html page.  <br>
 </div>
 
 <div id="use">
