@@ -1,0 +1,76 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://localhost:9000/assets/javascripts/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+    .card{width:1400px;
+    height:auto;
+    margin:150px 350px;
+    padding: 30px 100px;
+    border-radius:20px;
+    box-shadow:10px 10px;
+    background-color:white;
+    column-count:2;
+}
+.button1{
+font-size: 18pt; height: 55px; width:100%; background-color:blue;
+}
+    </style>
+</head>
+<body style="background-color:#008080;padding-top:10px;">
+<div class="card" >
+    <h1 style="color:red;">Welcome to the Admin dashboard  <span id="email_id" /></h1>
+	
+    <div align="center" class="col-sm-6">
+        
+        <div style="text-align:left;">
+		<h1>ID : <span id="customer_id" /></h1>
+        
+        </div>
+            
+        <br>
+<div>
+        <form action="http://localhost:8080/Bank%20App/List_of_customer notepad plus.html" method="GET" name="listOfCustom">
+            <p><button type="" class="button1" id="listOfCustomer">List Of Customer</button></p>
+        </form></div>
+        <br>
+        <form action="http://localhost:8080/Bank%20App/Registration_form.html" method="GET" name="registration">
+            <p><button type="submit" class="button1" >Registration Form</button></p>
+        </form>
+        <br>
+        <form action="http://localhost:8080/Bank%20App/List_of_customer notepad plus.html" method="GET">
+        <p><button type="submit" class="button1 " >Account activate/Deactivate</button></p>
+		    </div></form>
+			<p><h1><a href="http://localhost:8080/Bank%20App/index.html" >Logout<h1></p>
+			<div align="center" class="col-sm-6">
+        <div align="center" class="col-sm-6"><img src="https://www.paisabazaar.com/wp-content/uploads/2018/11/IDBI-Bank-GO-Mobile-App.jpg"></div>
+        
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+window.onload=function(){
+
+const email = localStorage.getItem('Email');
+	$.ajax({
+			type:"POST",
+			url:"http://localhost:9000/checkid",
+			data :{
+			email :email,
+			},
+			success: function(response){
+			document.getElementById('customer_id').innerHTML=response.id;
+			document.getElementById('email_id').innerHTML=response.username;
+			}
+});
+}	
+</script>
+</html>
