@@ -22,6 +22,7 @@ public class DepositeService {
 
         DepositeResponseDto depositeResponseDto=new DepositeResponseDto();
         Transaction transaction=new Transaction();
+        if(depositeRequestDto.getAmount()>0) {
 try {
     User user = User.find.byId(depositeRequestDto.getId());
     transaction.setUserId(user);
@@ -45,6 +46,10 @@ try {
     depositeResponseDto.setMessage("exception occurred" +exception);
     return depositeResponseDto;
 }
+            }else{
+            depositeResponseDto.setMessage("Please enter valid amount");
+            return depositeResponseDto;
+        }
        // loginResponseDto.setUsername(user.getUsername());
        // loginResponseDto.setUserStatus(user.getStatus().getName());
         return depositeResponseDto;
