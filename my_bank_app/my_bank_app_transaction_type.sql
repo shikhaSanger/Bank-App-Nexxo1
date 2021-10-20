@@ -16,32 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `customer_detail`
+-- Table structure for table `transaction_type`
 --
 
-DROP TABLE IF EXISTS `customer_detail`;
+DROP TABLE IF EXISTS `transaction_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `customer_detail` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) DEFAULT NULL,
-  `phone_number` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
-  `aadhar_number` varchar(45) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL,
-  `DOB` varchar(30) DEFAULT NULL,
+CREATE TABLE `transaction_type` (
+  `id` int NOT NULL,
+  `name` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `customer_detail`
+-- Dumping data for table `transaction_type`
 --
 
-LOCK TABLES `customer_detail` WRITE;
-/*!40000 ALTER TABLE `customer_detail` DISABLE KEYS */;
-INSERT INTO `customer_detail` VALUES (1,'Shikha','9456425633','Dadri','343637228844',NULL,NULL),(2,'Pooja','9456423746','Delhi','343689288882',NULL,NULL),(3,'Nishtha','9582708555','Delhi','984756345699',NULL,NULL),(4,'Urvashi','7303996659','Muzaffarnagar','98475634579',NULL,NULL),(7,'shikha','','','',NULL,NULL);
-/*!40000 ALTER TABLE `customer_detail` ENABLE KEYS */;
+LOCK TABLES `transaction_type` WRITE;
+/*!40000 ALTER TABLE `transaction_type` DISABLE KEYS */;
+INSERT INTO `transaction_type` VALUES (1,'credit'),(2,'debit');
+/*!40000 ALTER TABLE `transaction_type` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-14 16:09:50
+-- Dump completed on 2021-10-20 10:44:46
